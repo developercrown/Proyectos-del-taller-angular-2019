@@ -1,0 +1,50 @@
+<div class="box">
+  <form class="item" (ngSubmit)="f.form.valid && onGuardarPersona($event)" #f="ngForm">
+      <input
+        type="text"
+        name="nombre"
+        id="nombre"
+        placeholder="Nombre"
+        [(ngModel)]="nombreInput"
+        value="" required/>
+
+      <input
+        type="text"
+        name="apellido"
+        id="apellido"
+        placeholder="Apellido"
+        [(ngModel)]="apellidoInput"
+        value="" required/>
+
+      <button
+        type="submit"
+        class="btn btn-md btn-primary"
+        style="cursor: pointer;"
+        [ngClass]="{'modificar': index}"
+        name="button">{{
+          this.index ? 'M' : '+'
+        }}</button>
+
+      <button
+        *ngIf="index !=null"
+        type="submit"
+        class="btn btn-md btn-danger buttonRed"
+        style="cursor: pointer; background: rgb(214, 22, 44);"
+        name="button"
+        (click)="eliminarPersona($event)"
+        >-</button>
+  </form>
+</div>
+
+<!-- Asignando como Modelo -->
+
+<!-- [(ngModel)]="nombreInput" -->
+<!-- [(ngModel)]="apellidoInput" -->
+<!-- (click)="onAgregarPersona($event)" -->
+
+<!-- Utilizando las referencias locales -->
+<!-- #nombreInput -->
+<!-- #apellidoInput -->
+<!-- (click)="onAgregarPersona(nombreInput, apellidoInput)" -->
+
+<!-- Utilizando ViewChild -->

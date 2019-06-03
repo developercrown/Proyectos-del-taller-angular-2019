@@ -1,0 +1,17 @@
+<div class="box centrado" *ngIf="!isAutenticated()">
+  <a [routerLink]="['/login']" routerLinkActive="router-link-active">
+    login
+  </a>
+</div>
+
+<div class="box centrado" *ngIf="isAutenticated()">
+  <a style="cursor: pointer" (click)="salir()">Salir</a>
+</div>
+
+<div class="box" id="heading">
+  <h1>{{titulo}}</h1>
+</div>
+
+<router-outlet></router-outlet>
+
+<!-- (personaCreada)="onPersonaAgredada($event)" -->

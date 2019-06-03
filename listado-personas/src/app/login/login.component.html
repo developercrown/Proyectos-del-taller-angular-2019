@@ -1,0 +1,11 @@
+<div class="box">
+  <form class="item" #f="ngForm" (ngSubmit)="f.form.valid && login(f)">
+    <div>
+      <input type="email" name="email" placeholder="Email" size="20" ngModel required>
+    </div>
+    <div>
+      <input type="password" name="password" placeholder="Contraseña" size="15" ngModel required>
+    </div>
+    <button type="submit" style="cursor: pointer">+</button>
+  </form>
+</div>

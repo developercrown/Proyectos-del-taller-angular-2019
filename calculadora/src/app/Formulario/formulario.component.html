@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row mt-2">
+    <div class="col-sm-6">
+      <label for="operandoA">Operando A</label>
+      <input class="form-control" type="number" value="" [(ngModel)]="operandoA"/>
+    </div>
+    <div class="col-sm-6">
+      <label for="operandoB">Operando B</label>
+      <input class="form-control" type="number" value="" [(ngModel)]="operandoB"/>
+    </div>
+  </div>
+  <div class="col-sm-12 mt-4 text-center">
+    <button class="btn btn-lg btn-success" (click)="sumar()">Sumar</button>
+  </div>
+</div>

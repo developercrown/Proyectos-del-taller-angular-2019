@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <label for="name">Titulo Persona</label>
+      <input
+        type="text"
+        name="name"
+        value=""
+        class="form-control"
+        [(ngModel)]="tituloPersona"
+      >
+      <!-- (input)="onModificarPersona($event)" -->
+      {{tituloPersona}}
+      <h1>listado de personas</h1>
+      <button
+        class="btn btn-lg btn-primary"
+        (click)="onCrearPersona()"
+        [disabled]="!agregarPersona">Agregar Persona</button>
+        <p *ngIf="personaCreada; else sinPersona" >{{agregarPersonaStatus}} con titulo {{tituloPersona}}</p>
+        <ng-template #sinPersona>
+          <p>
+            No haz registrado persona alguna.
+          </p>
+        </ng-template>
+      <app-persona></app-persona>
+
+    </div>
+  </div>
+</div>
